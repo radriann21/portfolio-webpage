@@ -1,0 +1,54 @@
+---
+import BentoElement from "../elements/BentoElement.astro"
+import User from '../../icons/User.astro'
+import Script from '../../icons/Script.astro'
+---
+
+<main class="grid min-h-screen w-full gap-4 grid-cols-4 grid-rows-4">
+  
+  <BentoElement colSpan="col-span-2" rowSpan="row-span-2">
+    <div class="font-header text-heading-color px-6 w-fit flex justify-start items-center space-x-2 border-b-[1px] border-gray-400">
+      <User />
+      <p>About</p>
+    </div>
+    <section class="mt-4 text-text-color leading-normal font-display w-[90%]">
+      <p>
+        I am 21 years old and I have dedicated myself daily to my passion: <span class="underline decoration-wavy decoration-purple-600">programming</span>. I have studied Computer Science and taught myself how to use current technologies and also program using good practices. 
+        <br> <br>
+        As a CS student, I have developed my foundations while developing projects and my contribution to the Open Source community, I have developed my skills for collaborative work in real environments.
+      </p>
+      <a href="/about" class="bg-gray-900 btn btn-wide mt-4">
+        Read More
+        <Script />
+      </a>
+    </section>
+  </BentoElement>
+
+  <BentoElement colSpan="col-span-2" rowSpan="row-span-2">
+
+  </BentoElement>
+
+</div>
+</main>
+
+<!--
+
+  <div 
+    class="col-span-1 row-span-4 bg-yellow-200 rounded-lg shadow-md flex items-center justify-center"
+  >
+    <p>Tamago</p>
+  </div>
+
+  <div 
+    class="col-span-2 row-span-4 bg-tan-200 rounded-lg shadow-md flex items-center justify-center"
+  >
+    <p>Pork</p>
+  </div>
+
+  <div 
+    class="col-span-1 row-span-4 bg-green-200 rounded-lg shadow-md flex items-center justify-center"
+  >
+    <p>Edamame</p>
+  </div>
+
+-->

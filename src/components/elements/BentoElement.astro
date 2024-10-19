@@ -1,0 +1,12 @@
+---
+interface Props {
+  colSpan: string;
+  rowSpan: string;
+}
+
+const { colSpan, rowSpan } = Astro.props
+---
+
+<article class=`${colSpan} ${rowSpan} h-full w-full bg-slate-600 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 saturate-100 backdrop-contrast-100 rounded-lg p-6`>
+  <slot />
+</article>
