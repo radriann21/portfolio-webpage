@@ -1,0 +1,15 @@
+---
+import { social } from "../../data/social";
+---
+
+<ul class="list-none mt-8 w-[50%] flex items-center space-x-4">
+  {
+    social.map(link => (
+      <li class="transition-transform duration-200 hover:-translate-y-1">
+        <a href={link.href} target="_blank">
+          <link.icon />
+        </a>
+      </li>
+    ))
+  }
+</ul>

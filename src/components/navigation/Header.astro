@@ -1,0 +1,15 @@
+---
+import { menu } from "../../data/menu";
+---
+
+<header class="fixed inset-x-0 top-0 z-30 mx-auto max-w-7xl backdrop-blur-sm transition-all duration-200">
+  <div role="tablist" class="rounded-lg w-fit mx-auto mt-4 tabs tabs-bordered bg-gray-900 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-50 saturate-100 backdrop-contrast-100">
+    {
+      menu.map(option => (
+        <a role="tab" class="tab" href={option.href}>
+          {option.title}
+        </a>
+      ))
+    }
+  </div>
+</header>
