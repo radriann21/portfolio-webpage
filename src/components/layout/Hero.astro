@@ -3,7 +3,7 @@ import SocialList from "../ui/SocialList.astro"
 import CTAButtons from "../ui/CTAButtons.astro"
 ---
 
-<section class="h-screen w-full pt-28 md:pt-32">
+<section id="hero" class="-translate-x-10 opacity-0 h-screen w-full pt-28 md:pt-32">
   <article>
     <h1 class="w-[60%] font-header mb-4 my-4 font-bold text-4xl text-heading-color leading-tight">
       Adrian Rangel. <br> Software Developer and web designer.
@@ -17,3 +17,15 @@ import CTAButtons from "../ui/CTAButtons.astro"
     
   <SocialList />
 </section>
+
+<script>
+  import { inView, animate } from "motion"
+
+  inView('#hero', (info) => {
+    animate(
+      info.target, 
+      { opacity: 1, transform: "translateX(0)" },
+      { duration: 0.8 }
+    )
+  })
+</script>

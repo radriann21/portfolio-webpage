@@ -2,15 +2,16 @@
 import BentoElement from "../elements/BentoElement.astro"
 import User from '../../icons/User.astro'
 import Script from '../../icons/Script.astro'
+import Project from "../../icons/Project.astro"
+import BentoElementTitle from "../ui/BentoElementTitle.astro"
 ---
 
 <main class="grid min-h-screen w-full gap-4 grid-cols-4 grid-rows-4">
   
   <BentoElement colSpan="col-span-2" rowSpan="row-span-2">
-    <div class="font-header text-heading-color px-6 w-fit flex justify-start items-center space-x-2 border-b-[1px] border-gray-400">
+    <BentoElementTitle title="About">
       <User />
-      <p>About</p>
-    </div>
+    </BentoElementTitle>
     <section class="mt-4 text-text-color leading-normal font-display w-[90%]">
       <p>
         I am 21 years old and I have dedicated myself daily to my passion: <span class="underline decoration-wavy decoration-purple-600">programming</span>. I have studied Computer Science and taught myself how to use current technologies and also program using good practices. 
@@ -25,7 +26,9 @@ import Script from '../../icons/Script.astro'
   </BentoElement>
 
   <BentoElement colSpan="col-span-2" rowSpan="row-span-2">
-
+    <BentoElementTitle title="Projects">
+      <Project />
+    </BentoElementTitle>
   </BentoElement>
 
 </div>

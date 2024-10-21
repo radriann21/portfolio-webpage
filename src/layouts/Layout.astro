@@ -16,10 +16,33 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="max-w-full relative min-h-screen text-text-color bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
-		<slot />
+	<body class="max-w-full relative min-h-screen text-text-color">
+		<div class="relative min-h-screen max-w-full [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+			<svg class="absolute top-0 left-0 z-0 blur-xl" id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><g transform="translate(-114.8599266924331 68.5335270287112)"><path d="M377.3 -545.4C499 -508.8 614.7 -421.2 647 -308C679.3 -194.7 628.2 -55.9 571.1 55.7C513.9 167.3 450.8 251.6 373.4 301.8C296 351.9 204.4 367.8 112.8 403.6C21.2 439.4 -70.2 495.1 -140.7 475.9C-211.1 456.7 -260.5 362.6 -267.6 275.7C-274.6 188.8 -239.4 109.1 -260.4 31.2C-281.3 -46.8 -358.5 -122.9 -398.8 -243.4C-439.2 -364 -442.6 -529 -370 -588C-297.4 -647 -148.7 -600 -10.5 -583.7C127.8 -567.5 255.5 -582 377.3 -545.4" fill="#251256"></path></g></svg>
+			<slot />
+		</div>
 	</body>
 </html>
+
+<script>
+	import { animate } from "motion"
+
+	animate("#visual", { 
+		transform: [
+      "translateX(0px) translateY(0px)",
+      "translateX(-5px) translateY(-10px)",
+			"translateX(-12px) translateY(-15px)",
+			"translateX(-5px) translateY(-20px)",
+			"translateX(0px) translateY(-5px)",
+      "translateX(0px) translateY(0px)"] 
+		}, 
+		{ 
+			duration: 5, 
+			easing: "ease-out", 
+			repeat: Infinity 
+		})
+</script>
+
 <style is:global>
 html, body {
 	max-width: 100%;

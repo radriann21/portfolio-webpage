@@ -7,6 +7,18 @@ interface Props {
 const { colSpan, rowSpan } = Astro.props
 ---
 
-<article class=`${colSpan} ${rowSpan} h-full w-full bg-slate-600 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 saturate-100 backdrop-contrast-100 rounded-lg p-6`>
+<article id="element" class=`-translate-x-10 opacity-0 ${colSpan} ${rowSpan} h-full w-full p-6 rounded-lg border border-indigo-400/70 shadow-inner transition-shadow duration-500 dark:border-zinc-700/40 dark:shadow-zinc-700/40 bg-slate-600 bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 saturate-100 backdrop-contrast-100`>
   <slot />
 </article>
+
+<script>
+  import { inView, animate } from "motion"
+
+  inView('#element', (info) => {
+    animate(
+      info.target, 
+      { opacity: 1, transform: "translateX(0)"},
+      { duration: 0.8, delay: 0.2 }
+    )
+  })
+</script>
